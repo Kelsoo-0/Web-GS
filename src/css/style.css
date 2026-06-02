@@ -1,0 +1,113 @@
+:root{
+    --bg-header1: rgb(70, 121, 233);
+    --bg-footer1: rgb(88, 34, 12);
+    --bg-divs1: #fff;
+    --mainFontFamily: 'Times New Roman', Times, serif;
+    --mainFontColor: rgb(44, 161, 20);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--mainFontFamily);
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: var(--bg-header1);
+    height: 9em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header button {
+    height: 2.6em;
+    padding: 0 1.2em;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    color: var(--mainFontColor);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+header button:hover {
+    border-color: rgba(44, 161, 20, 3);
+    transform: translateY(-1px);
+}
+
+header button:active {
+    transform: translateY(0px) scale(0.97);
+    background: rgba(44, 161, 20, 1);
+}
+
+header button:focus-visible {
+    outline: 2px solid var(--mainFontColor);
+    outline-offset: 2px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    align-items: center;
+}
+.categoria {
+    width: 100%;
+    max-width: 60em;
+    margin-top: 5em;
+    background: var(--bg-divs1);
+    border: 0.5px solid rgba(36, 204, 14, 0.35);
+    border-left: 3px solid #24cc0e;
+    border-radius: 0 14px 14px 0;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 32px rgba(36, 204, 14, 0.15), 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.categoria:hover {
+    box-shadow: 0 8px 48px rgba(36, 204, 14, 0.28), 0 2px 8px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.categoria h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.categoria p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.categoria-divider {
+    height: 0.5px;
+    background: rgba(36, 204, 14, 0.2);
+    border: none;
+}
+.integrantes{
+    display: flex;
+    width: 100%;
+    max-width: 60em;
+    align-items: center;
+    margin: 5em auto 5em auto;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.8);
+}
+footer{
+    background-color: var(--bg-footer1);
+    height: 9em;
+    margin-top: auto;
+}
