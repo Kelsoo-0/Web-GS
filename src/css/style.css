@@ -14,9 +14,17 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.logo{
+    width: 9em;
+    height: 9em;
+    background-color: var(--mainFontColor);
+    border-radius: 50%;
+}
+
 header{
     background-color: var(--bg-header1);
-    height: 9em;
+    height: 11em;
     display: flex;
     justify-content: space-around;
     align-items: center;
