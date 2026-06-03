@@ -1,1 +1,72 @@
 @import url('./pagina.css');
+
+:root{
+    --azul-neon: rgb(39, 169, 225);
+    --card-solucao: rgba(0, 8, 32, 0.86);
+}
+
+body{
+    background-image: var(--bg-estrelas);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.solucao-layout{
+    width: min(94%, 96em);
+    margin: 0 auto;
+    padding: 7em 1.5em;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card{
+    max-width: 48em;
+    background: var(--card-solucao);
+    border: 2px solid var(--azul-neon);
+    border-left: 4px solid var(--azul-neon);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 28px rgba(39, 169, 225, 0.72), inset 0 0 24px rgba(39, 169, 225, 0.12);
+}
+
+.card h1{
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    text-shadow: 0 0 14px rgba(39, 169, 225, 0.9);
+}
+
+.card p{
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.card hr{
+    background: rgba(39, 169, 225, 0.55);
+}
+
+.imagem-solucao{
+    width: min(26vw, 25em);
+    height: auto;
+    filter: drop-shadow(0 0 24px rgba(39, 169, 225, 0.58));
+}
+
+.imagem-estufa{
+    border-radius: 14px;
+}
+
+@media (max-width: 1100px){
+    .solucao-layout{
+        flex-direction: column;
+        padding: 5em 1.5em 3em;
+    }
+
+    .card{
+        max-width: 60em;
+    }
+
+    .imagem-solucao{
+        width: min(85%, 28em);
+    }
+}
