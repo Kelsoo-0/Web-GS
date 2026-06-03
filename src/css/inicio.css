@@ -2,6 +2,8 @@
     --mainFontFamily: 'Michroma', Times, serif;
     --mainFontColor: rgb(44, 161, 20);
     --bg-foguete: url('../assets/foguete.png');
+    --bg-card: rgba(0, 8, 32, 0.86);
+    --azul-neon: rgb(39, 169, 225);
 }
 
 *{
@@ -43,8 +45,12 @@ body{
 }
 
 .bottons button {
-    background-color: rgb(0, 14, 44);
-    border: 2px solid rgb(39, 169, 225);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, var(--azul-neon) 50%, var(--bg-card) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    border: 2px solid var(--azul-neon);
     color: rgb(255, 255, 255);
     width: 340px;
     height: 90px;
@@ -52,5 +58,17 @@ body{
     border-radius: 12px;
     cursor: pointer;
     font-family: var(--mainFontFamily);
+    box-shadow: inset 0 0 12px rgba(39, 169, 225, 0.12);
     transform: translateY(-47px);
+    transition: background-position 0.35s ease, box-shadow 0.25s, transform 0.15s;
+}
+
+.bottons button:hover {
+    background-position: 0 0;
+    box-shadow: 0 0 18px rgba(39, 169, 225, 0.85);
+    transform: translateY(-49px);
+}
+
+.bottons button:active {
+    transform: translateY(-47px) scale(0.97);
 }
