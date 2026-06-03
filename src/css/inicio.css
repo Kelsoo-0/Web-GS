@@ -1,0 +1,56 @@
+:root{
+    --mainFontFamily: 'Michroma', Times, serif;
+    --mainFontColor: rgb(44, 161, 20);
+    --bg-foguete: url('../assets/foguete.png');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--mainFontFamily);
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: var(--bg-foguete);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 17em;
+    height: 17em;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translateY(-150px);
+}
+
+.bottons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.bottons button {
+    background-color: rgb(0, 14, 44);
+    border: 2px solid rgb(39, 169, 225);
+    color: rgb(255, 255, 255);
+    width: 340px;
+    height: 90px;
+    font-size: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--mainFontFamily);
+    transform: translateY(-47px);
+}

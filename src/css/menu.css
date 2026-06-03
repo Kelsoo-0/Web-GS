@@ -5,57 +5,20 @@
     --mainFontFamily: 'Michroma', Times, serif;
     --mainFontColor: rgb(44, 161, 20);
     --bg-estrelas: url(../assets/estrelas_fundo.png);
-    --bg-foguete: url('../assets/foguete.png');
     --bg-logo: url('../assets/logo_Horizon.png');
 }
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body{
-    font-family: var(--mainFontFamily);
-    display: flex;
-    flex-direction: column;
-}
-
-.hero {
     min-height: 100vh;
-    background-image: var(--bg-foguete);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-logo {
-    width: 17em;
-    height: 17em;
-    border-radius: 50%;
-    object-fit: cover;
-    transform: translateY(-150px);
-}
-
-.bottons {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.bottons button {
-    background-color: rgb(0, 14, 44);
-    border: 2px solid rgb(39, 169, 225);
-    color: rgb(255, 255, 255);
-    width: 340px;
-    height: 90px;
-    font-size: 25px;
-    border-radius: 12px;
-    cursor: pointer;
     font-family: var(--mainFontFamily);
-    transform: translateY(-47px);
+    display: flex;
+    flex-direction: column;
 }
 
 .logo{
@@ -67,15 +30,19 @@ body{
 
 header{
     background-color: var(--bg-header1);
-    height: 11em;
+    min-height: 11em;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 1em;
     background-image: var(--bg-estrelas);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 header button {
     height: 3.6em;
     padding: 0 1.2em;
@@ -90,7 +57,7 @@ header button {
 }
 
 header button:hover {
-    border-color: rgba(44, 161, 20, 3);
+    border-color: rgba(44, 161, 20, 1);
     transform: translateY(-1px);
 }
 
@@ -103,12 +70,14 @@ header button:focus-visible {
     outline: 2px solid var(--mainFontColor);
     outline-offset: 2px;
 }
+
 .main{
     display: flex;
     flex-direction: column;
-    padding-top: 5em;
+    padding: 5em 1.5em;
     align-items: center;
 }
+
 .categoria {
     width: 100%;
     max-width: 60em;
@@ -148,19 +117,7 @@ header button:focus-visible {
     background: rgba(36, 204, 14, 0.2);
     border: none;
 }
-.integrantes{
-    display: flex;
-    width: 100%;
-    max-width: 60em;
-    align-items: center;
-    margin: 5em auto 5em auto;
-    padding-top: 1em;
-    padding-bottom: 2em;
-    flex-direction: column;
-    gap: 1rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.8);
-}
+
 footer{
     background-color: var(--bg-header1);
     height: 9em;
