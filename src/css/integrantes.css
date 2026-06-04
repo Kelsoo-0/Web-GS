@@ -24,6 +24,9 @@ body {
     gap: 2rem;
     background-color: var(--azul-espaco);
     overflow-x: hidden;
+    transform: scale(0.67);
+    transform-origin: top left;
+    width: 149.25%;
 }
 
 .fundo_integrantes {

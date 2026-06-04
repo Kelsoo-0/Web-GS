@@ -17,6 +17,9 @@ body{
     font-family: var(--mainFontFamily);
     display: flex;
     flex-direction: column;
+    transform: scale(0.67);
+    transform-origin: top left;
+    width: 149.25%;
 }
 
 .logo{
