@@ -1,3 +1,5 @@
+@import url('./pagina.css');
+
 :root{
     --bg-header: rgb(0, 1, 34);
     --bg-card: rgba(0, 8, 32, 0.86);
@@ -84,6 +86,10 @@ header button:active{
 header button:focus-visible{
     outline: 2px solid var(--verde-horizon);
     outline-offset: 2px;
+}
+
+main{
+    flex: 1;
 }
 
 .card{

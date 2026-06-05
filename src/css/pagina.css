@@ -72,6 +72,10 @@ header button:hover {
     transform: translateY(-1px);
 }
 
+main{
+    flex: 1;
+}
+
 .conteudo{
     display: flex;
     justify-content: center;
@@ -119,4 +123,19 @@ footer{
     background-repeat: no-repeat;
     border-top: 2px solid rgb(39, 169, 225);
     box-shadow: 0 0 22px rgba(39, 169, 225, 0.8);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+.redesSociais{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+.contatos{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
