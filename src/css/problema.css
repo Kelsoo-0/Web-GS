@@ -1,67 +1,40 @@
-@import url('./pagina.css');
+@import url("./sobre.css");
 
-:root{
-    --azul-neon: rgb(39, 169, 225);
-    --card-problema: rgba(0, 8, 32, 0.86);
-}
-
-body{
-    background-image: var(--bg-estrelas);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.conteudo{
-    width: min(90%, 90em);
-    margin: 0 auto;
-    padding: 7em 1.5em;
-    flex-direction: column;
+.problema-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
     align-items: center;
-    gap: 3rem;
+    gap: clamp(28px, 6vw, 80px);
 }
 
-.card{
-    max-width: 68em;
-    background: var(--card-problema);
-    border: 2px solid var(--azul-neon);
-    border-left: 4px solid var(--azul-neon);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 28px rgba(39, 169, 225, 0.72), inset 0 0 24px rgba(39, 169, 225, 0.12);
+.imagem-problema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card h1{
-    color: rgb(255, 255, 255);
-    font-size: 32px;
-    text-shadow: 0 0 14px rgba(39, 169, 225, 0.9);
-}
-
-.card p{
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 17px;
-    line-height: 1.9;
-}
-
-.card hr{
-    background: rgba(39, 169, 225, 0.55);
-}
-
-.base{
-    width: min(90%, 46em);
+.imagem-problema img {
+    width: min(100%, 520px);
     height: auto;
-    filter: drop-shadow(0 0 24px rgba(39, 169, 225, 0.55));
+    filter: drop-shadow(0 0 28px rgba(39, 169, 225, 0.45));
 }
 
-@media (max-width: 1050px){
-    .conteudo{
-        padding: 5em 1.5em 3em;
+.pergunta {
+    margin-top: 22px;
+    padding: 18px;
+    color: #ffffff !important;
+    border-left: 3px solid var(--azul-neon);
+    background: rgba(39, 169, 225, 0.12);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .problema-layout {
+        grid-template-columns: 1fr;
     }
 
-    .base{
-        width: min(90%, 32em);
+    .imagem-problema img {
+        max-height: 380px;
+        object-fit: contain;
     }
 }

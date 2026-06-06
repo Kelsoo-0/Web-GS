@@ -1,70 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/quiz.css">
-    <title>Quiz</title>
+    <title>Quiz | Horizon</title>
 </head>
 <body>
     <header>
-        <a href="./menu.html"><img class="logo" src="./src/assets/logo_Horizon.png" alt="Logo Horizon"></a>
-        <a href="./menu.html"><button>Sobre Nós</button></a>
-        <a href="./problema.html"><button>Problema</button></a>
-        <a href="./solucao.html"><button>Solução</button></a>
-        <a href="./funcionamento.html"><button>Funcionamento</button></a>
-        <a href="./tecnologias.html"><button>Tecnologias</button></a>
-        <a href="./impacto.html"><button>Impacto</button></a>
-        <a href="./quiz.html"><button>Quiz</button></a>
+        <a class="logo-link" href="./sobre.html" aria-label="Ir para Sobre a Horizon">
+            <img class="logo" src="./src/assets/logo_Horizon.png" alt="Logo Horizon">
+        </a>
+        <nav aria-label="Navegação principal">
+            <a href="./sobre.html">Sobre a Horizon</a>
+            <a href="./problema.html">Problema</a>
+            <a href="./solucao.html">Solução</a>
+            <a href="./funcionamento.html">Funcionamento</a>
+            <a href="./tecnologias.html">Tecnologias</a>
+            <a href="./impacto.html">Impacto</a>
+            <a class="active" href="./quiz.html" aria-current="page">Quiz</a>
+        </nav>
     </header>
 
     <main class="conteudo">
-        <section class="card">
-            <div id="quiz-wrap">
+        <section class="quiz-card" aria-labelledby="quiz-title">
+            <div class="quiz-header">
                 <div>
-                    <p>Estufa Lunar — 10 perguntas</p>
-                <div id="progress-bar"><div id="progress-fill"></div></div>
-                    <p id="counter">Pergunta 1 de 10</p>
+                    <h1 id="quiz-title">Quiz: Estufa Lunar</h1>
+                </div>
+                <p id="counter">Pergunta 1 de 10</p>
             </div>
 
-            <div id="q-container"></div>
-            <div id="score-card">
+            <div id="progress-bar" aria-label="Progresso do quiz">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div id="q-container" aria-live="polite"></div>
+
+            <div id="score-card" aria-live="polite">
+                <p class="resultado-titulo">Resultado final</p>
                 <div id="score-num"></div>
-                <div id="score-label">de 10 perguntas corretas</div>
+                <div id="score-label">perguntas corretas</div>
                 <div id="score-msg"></div>
-                    <button id="restart-btn">Tentar novamente</button>
-                </div>
+                <button id="restart-btn" type="button">Tentar novamente</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="redesSociais">
-            <h1>Redes Sociais:</h1>
-            <ul>
-                <li>Instagram: @HorizonBR</li>
-                <li>FaceBook: HorizonBR</li>
-                <li>X: HorizonBR</li>
-                <li>Tiktok: HorizonBR</li>
-            </ul>
-        </div>
-        <div class="contatos">
-            <h1>Contatos:</h1>
-            <ul>
-                <li>E-mail: contato.horizonbr@gmail.com</li>
-                <li>WhatsApp: (11)98017-2525</li>
-                <li>Endereço: Av. Paulista, 1106 - 7º andar, Bela Vista, São Paulo - SP.</li>
-            </ul>
-        </div>
-        <h1>© 2026 Horizon</h1>
+        <section>
+            <h2>Redes Sociais</h2>
+            <ul><li>Instagram: @HorizonBR</li><li>Facebook: HorizonBR</li><li>X: HorizonBR</li><li>TikTok: HorizonBR</li></ul>
+        </section>
+        <section>
+            <h2>Contatos</h2>
+            <ul><li>E-mail: contato.horizonbr@gmail.com</li><li>WhatsApp: (11) 98017-2525</li><li>Endereço: Av. Paulista, 1106 - 7º andar, Bela Vista, São Paulo - SP.</li></ul>
+        </section>
+        <p class="copyright">© 2026 Horizon</p>
     </footer>
+
     <script src="./src/js/script.js"></script>
 </body>
 </html>

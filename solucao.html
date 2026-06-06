@@ -1,64 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/solucao.css">
-    <title>Solução</title>
+    <title>Solução | Horizon</title>
 </head>
 <body>
     <header>
-        <a href="./menu.html"><img class="logo" src="./src/assets/logo_Horizon.png" alt="Logo Horizon"></a>
-        <a href="./menu.html"><button>Sobre Nós</button></a>
-        <a href="./problema.html"><button>Problema</button></a>
-        <a href="./solucao.html"><button>Solução</button></a>
-        <a href="./funcionamento.html"><button>Funcionamento</button></a>
-        <a href="./tecnologias.html"><button>Tecnologias</button></a>
-        <a href="./impacto.html"><button>Impacto</button></a>
-        <a href="./quiz.html"><button>Quiz</button></a>
+        <a class="logo-link" href="./sobre.html" aria-label="Ir para Sobre a Horizon">
+            <img class="logo" src="./src/assets/logo_Horizon.png" alt="Logo Horizon">
+        </a>
+        <nav aria-label="Navegação principal">
+            <a href="./sobre.html">Sobre a Horizon</a>
+            <a href="./problema.html">Problema</a>
+            <a class="active" href="./solucao.html" aria-current="page">Solução</a>
+            <a href="./funcionamento.html">Funcionamento</a>
+            <a href="./tecnologias.html">Tecnologias</a>
+            <a href="./impacto.html">Impacto</a>
+            <a href="./quiz.html">Quiz</a>
+        </nav>
     </header>
 
-    <main class="conteudo solucao-layout">
-        <img class="imagem-solucao imagem-vsb" src="./src/assets/VSB.png" alt="Foguete VSB">
-
-        <section class="card">
-            <h1>Solução</h1>
-            <hr>
-            <p>Para resolver o problema da produção de alimento em ambientes espaciais, propomos uma estufa compacta e automatizada.</p>
-            <p>Cada compartimento teria uma composição de solo diferente. Todos os compartimentos passam pelo mesmo ambiente de missão, recebendo medições equivalentes e sendo comparados por IA.</p>
-            <p>O sistema mede temperatura, umidade do ar, umidade de cada substrato, luminosidade, nível de água e energia. A IA cruza essas informações para avaliar qual substrato manteve maior estabilidade e melhor retenção de água. </p>
+    <main>
+        <section class="solucao-layout">
+            <figure class="imagem-solucao imagem-vsb">
+                <img src="./src/assets/VSB.png" alt="Veículo suborbital brasileiro VSB-30">
+                <figcaption>VSB-30</figcaption>
+            </figure>
+            <article class="card">
+                <h1>Nossa solução</h1>
+                <p>A Horizon propõe uma estufa-laboratório compacta e automatizada, desenvolvida para comparar diferentes substratos em condições de microgravidade.</p>
+                <p>A estrutura possui compartimentos independentes. Cada um recebe uma composição diferente, como solo terrestre, regolito lunar simulado puro e versões tratadas com biochar, hidrogel, matéria orgânica e nutrientes.</p>
+                <p>Durante a missão, sensores acompanham temperatura, luminosidade e umidade. A inteligência artificial cruza os dados para identificar anomalias e comparar o desempenho de cada substrato.</p>
+                <p>O experimento seria levado ao espaço pelo veículo suborbital brasileiro VSB-30, que proporcionaria cerca de seis minutos de microgravidade. Após o voo, a carga útil seria recuperada para análise.</p>
+                <p>O objetivo é descobrir quais substratos apresentam maior estabilidade e retenção de água para futuras pesquisas e missões lunares.</p>
+            </article>
+            <figure class="imagem-solucao imagem-estufa">
+                <img src="./src/assets/estufa_construcao.png" alt="Estrutura interna da estufa Horizon">
+                <figcaption>Estufa Horizon</figcaption>
+            </figure>
         </section>
-
-        <img class="imagem-solucao imagem-estufa" src="./src/assets/estufa_construcao.png" alt="Construção da estufa Horizon">
     </main>
 
     <footer>
-        <div class="redesSociais">
-            <h1>Redes Sociais:</h1>
+        <section>
+            <h2>Redes Sociais</h2>
             <ul>
                 <li>Instagram: @HorizonBR</li>
-                <li>FaceBook: HorizonBR</li>
+                <li>Facebook: HorizonBR</li>
                 <li>X: HorizonBR</li>
-                <li>Tiktok: HorizonBR</li>
+                <li>TikTok: HorizonBR</li>
             </ul>
-        </div>
-        <div class="contatos">
-            <h1>Contatos:</h1>
+        </section>
+        <section>
+            <h2>Contatos</h2>
             <ul>
                 <li>E-mail: contato.horizonbr@gmail.com</li>
-                <li>WhatsApp: (11)98017-2525</li>
+                <li>WhatsApp: (11) 98017-2525</li>
                 <li>Endereço: Av. Paulista, 1106 - 7º andar, Bela Vista, São Paulo - SP.</li>
             </ul>
-        </div>
-        <h1>© 2026 Horizon</h1>
+        </section>
+        <p class="copyright">© 2026 Horizon</p>
     </footer>
-    <script src="./src/js/script.js"></script>
 </body>
 </html>

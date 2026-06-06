@@ -1,72 +1,69 @@
-@import url('./pagina.css');
+@import url("./sobre.css");
 
-:root{
-    --azul-neon: rgb(39, 169, 225);
-    --card-solucao: rgba(0, 8, 32, 0.86);
+main {
+    width: min(1500px, 100%);
 }
 
-body{
-    background-image: var(--bg-estrelas);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-}
-
-.solucao-layout{
-    width: min(94%, 96em);
-    margin: 0 auto;
-    padding: 7em 1.5em;
+.solucao-layout {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(420px, 1.6fr) minmax(180px, 0.7fr);
     align-items: center;
-    gap: 3rem;
+    gap: clamp(20px, 3vw, 48px);
 }
 
-.card{
-    max-width: 48em;
-    background: var(--card-solucao);
-    border: 2px solid var(--azul-neon);
-    border-left: 4px solid var(--azul-neon);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 28px rgba(39, 169, 225, 0.72), inset 0 0 24px rgba(39, 169, 225, 0.12);
+.imagem-solucao {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
-.card h1{
-    color: rgb(255, 255, 255);
-    font-size: 32px;
-    text-shadow: 0 0 14px rgba(39, 169, 225, 0.9);
-}
-
-.card p{
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 17px;
-    line-height: 1.9;
-}
-
-.card hr{
-    background: rgba(39, 169, 225, 0.55);
-}
-
-.imagem-solucao{
-    width: min(26vw, 25em);
-    height: auto;
-    filter: drop-shadow(0 0 24px rgba(39, 169, 225, 0.58));
-}
-
-.imagem-estufa{
+.imagem-solucao img {
+    width: 100%;
+    max-height: 430px;
+    object-fit: contain;
     border-radius: 14px;
+    filter: drop-shadow(0 0 24px rgba(39, 169, 225, 0.48));
 }
 
-@media (max-width: 1100px){
-    .solucao-layout{
-        flex-direction: column;
-        padding: 5em 1.5em 3em;
+.imagem-vsb img {
+    max-width: 300px;
+}
+
+.imagem-estufa img {
+    max-width: 360px;
+}
+
+.imagem-solucao figcaption {
+    color: var(--texto-suave);
+    font-family: var(--fonte-titulo);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+    .solucao-layout {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .card{
-        max-width: 60em;
+    .solucao-layout .card {
+        grid-column: 1 / -1;
+        grid-row: 1;
     }
 
-    .imagem-solucao{
-        width: min(85%, 28em);
+    .imagem-solucao img {
+        max-height: 340px;
+    }
+}
+
+@media (max-width: 620px) {
+    .solucao-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .solucao-layout .card {
+        grid-column: auto;
     }
 }

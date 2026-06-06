@@ -1,18 +1,17 @@
-:root{
-    --mainFontFamily: 'Michroma', Times, serif;
-    --mainFontColor: rgb(44, 161, 20);
-    --bg-foguete: url('../assets/foguete.png');
+:root {
+    --mainFontFamily: "Michroma", Times, serif;
+    --bg-foguete: url("../assets/foguete.png");
     --bg-card: rgba(0, 8, 32, 0.86);
     --azul-neon: rgb(39, 169, 225);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--mainFontFamily);
     display: flex;
     flex-direction: column;

@@ -1,59 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/funcionamento.css">
-    <title>Funcionamento</title>
+    <title>Funcionamento | Horizon</title>
 </head>
 <body>
     <header>
-        <a href="./menu.html"><img class="logo" src="./src/assets/logo_Horizon.png" alt="Logo Horizon"></a>
-        <a href="./menu.html"><button>Sobre Nós</button></a>
-        <a href="./problema.html"><button>Problema</button></a>
-        <a href="./solucao.html"><button>Solução</button></a>
-        <a href="./funcionamento.html"><button>Funcionamento</button></a>
-        <a href="./tecnologias.html"><button>Tecnologias</button></a>
-        <a href="./impacto.html"><button>Impacto</button></a>
-        <a href="./quiz.html"><button>Quiz</button></a>
+        <a class="logo-link" href="./sobre.html" aria-label="Ir para Sobre a Horizon"><img class="logo" src="./src/assets/logo_Horizon.png" alt="Logo Horizon"></a>
+        <nav aria-label="Navegação principal">
+            <a href="./sobre.html">Sobre a Horizon</a><a href="./problema.html">Problema</a><a href="./solucao.html">Solução</a>
+            <a class="active" href="./funcionamento.html" aria-current="page">Funcionamento</a>
+            <a href="./tecnologias.html">Tecnologias</a><a href="./impacto.html">Impacto</a><a href="./quiz.html">Quiz</a>
+        </nav>
     </header>
-
     <main class="conteudo">
-        <section class="card">
+        <article class="card">
             <h1>Funcionamento</h1>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rem animi tempora molestiae commodi odit aspernatur excepturi culpa accusamus eaque!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam commodi rerum saepe perspiciatis architecto amet repellat minus deleniti dolores labore.</p>
-        </section>
+            <p>A Horizon possui compartimentos independentes, cada um com uma composição diferente de substrato. Entre as opções analisadas estão o solo terrestre, o regolito lunar simulado puro e versões tratadas com materiais como biochar, hidrogel e nutrientes.</p>
+            <p>Durante o voo suborbital, a estufa permanece protegida dentro da carga útil experimental. Sensores registram as condições internas e acompanham como cada substrato reage à microgravidade.</p>
+            <p>A inteligência artificial compara os dados coletados, identifica possíveis anomalias e avalia quais composições apresentaram melhor retenção de água e maior estabilidade.</p>
+            <p>Após aproximadamente seis minutos de microgravidade, a carga útil retorna à Terra para que os resultados sejam analisados.</p>
+        </article>
     </main>
-
     <footer>
-        <div class="redesSociais">
-            <h1>Redes Sociais:</h1>
-            <ul>
-                <li>Instagram: @HorizonBR</li>
-                <li>FaceBook: HorizonBR</li>
-                <li>X: HorizonBR</li>
-                <li>Tiktok: HorizonBR</li>
-            </ul>
-        </div>
-        <div class="contatos">
-            <h1>Contatos:</h1>
-            <ul>
-                <li>E-mail: contato.horizonbr@gmail.com</li>
-                <li>WhatsApp: (11)98017-2525</li>
-                <li>Endereço: Av. Paulista, 1106 - 7º andar, Bela Vista, São Paulo - SP.</li>
-            </ul>
-        </div>
-        <h1>© 2026 Horizon</h1>
+        <section><h2>Redes Sociais</h2><ul><li>Instagram: @HorizonBR</li><li>Facebook: HorizonBR</li><li>X: HorizonBR</li><li>TikTok: HorizonBR</li></ul></section>
+        <section><h2>Contatos</h2><ul><li>E-mail: contato.horizonbr@gmail.com</li><li>WhatsApp: (11) 98017-2525</li><li>Endereço: Av. Paulista, 1106 - 7º andar, Bela Vista, São Paulo - SP.</li></ul></section>
+        <p class="copyright">© 2026 Horizon</p>
     </footer>
-    <script src="./src/js/script.js"></script>
 </body>
 </html>
