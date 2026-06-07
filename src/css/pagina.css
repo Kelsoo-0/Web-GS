@@ -6,6 +6,47 @@
     --texto-suave: rgba(255, 255, 255, 0.82);
     --fonte-titulo: "Michroma", sans-serif;
     --fonte-texto: "Raleway", sans-serif;
+    --bg-overlay: rgba(0, 1, 34, 0.28), rgba(0, 1, 34, 0.6);
+    --bg-surface: rgba(0, 1, 34, 0.94);
+    --neon-glow: rgba(39, 169, 225, 0.55);
+}
+
+.space-mode{
+    --azul-escuro: #000122;
+    --azul-card: rgba(0, 8, 32, 0.9);
+    --azul-neon: #27a9e1;
+    --texto: #ffffff;
+    --texto-suave: rgba(255, 255, 255, 0.82);
+    --fonte-titulo: "Michroma", sans-serif;
+    --fonte-texto: "Raleway", sans-serif;
+    --bg-overlay: rgba(0, 1, 34, 0.28), rgba(0, 1, 34, 0.6);
+    --bg-surface: rgba(0, 1, 34, 0.94);
+    --neon-glow: rgba(39, 169, 225, 0.55);
+}
+
+
+.earth-mode{
+    --azul-escuro: #643909;
+    --azul-card: rgba(117, 85, 25, 0.801);
+    --azul-neon: #493312;
+    --texto: #9bbb0d;
+    --texto-suave: rgba(194, 212, 25, 0.82);
+    --fonte-titulo: "Michroma", sans-serif;
+    --fonte-texto: "Raleway", sans-serif;
+    --bg-surface: rgba(20, 60, 5, 0.94);
+    --neon-glow: rgba(37, 182, 18, 0.55);
+}
+
+.moon-mode{
+    --azul-escuro: #6f7081;
+    --azul-card: rgba(88, 90, 97, 0.9);
+    --azul-neon: #3c4549;
+    --texto: #fdfdfd;
+    --texto-suave: rgba(255, 255, 255, 0.82);
+    --fonte-titulo: "Michroma", sans-serif;
+    --fonte-texto: "Raleway", sans-serif;
+    --bg-surface: rgba(60, 62, 70, 0.94);
+    --neon-glow: rgba(60, 69, 73, 0.55);
 }
 
 * {
@@ -21,7 +62,7 @@ body {
     color: var(--texto);
     background-color: var(--azul-escuro);
     background-image:
-        linear-gradient(rgba(0, 1, 34, 0.3), rgba(0, 1, 34, 0.68)),
+        linear-gradient(var(--bg-overlay)),
         url("../assets/estrelas_espaco.png");
     background-size: cover;
     background-position: center;
@@ -35,9 +76,9 @@ header {
     display: flex;
     align-items: center;
     gap: clamp(24px, 4vw, 64px);
-    background: rgba(0, 1, 34, 0.95);
+    background: var(--bg-surface);
     border-bottom: 2px solid var(--azul-neon);
-    box-shadow: 0 0 22px rgba(39, 169, 225, 0.55);
+    box-shadow: 0 0 22px var(--neon-glow);
 }
 
 .logo-link {
@@ -85,13 +126,13 @@ nav a {
 nav a:hover,
 nav a.active {
     background-position: 0 0;
-    box-shadow: 0 0 16px rgba(39, 169, 225, 0.75);
+    box-shadow: 0 0 16px var(--azul-neon);
     transform: translateY(-1px);
 }
 
 nav a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #ffffff;
+    outline: 3px solid var(--texto);
     outline-offset: 3px;
 }
 
@@ -116,7 +157,7 @@ main {
     border-left: 4px solid var(--azul-neon);
     border-radius: 0 18px 18px 0;
     background: var(--azul-card);
-    box-shadow: 0 0 28px rgba(39, 169, 225, 0.5), inset 0 0 24px rgba(39, 169, 225, 0.1);
+    box-shadow: 0 0 28px var(--neon-glow), inset 0 0 24px var(--azul-neon);
 }
 
 .tag {
@@ -132,11 +173,11 @@ main {
 .card h1 {
     margin-bottom: 24px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(39, 169, 225, 0.75);
+    border-bottom: 1px solid var(--azul-neon);
     font-family: var(--fonte-titulo);
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     line-height: 1.3;
-    text-shadow: 0 0 14px rgba(39, 169, 225, 0.9);
+    text-shadow: 0 0 14px var(--azul-neon);
 }
 
 .card p {
@@ -155,9 +196,9 @@ footer {
     grid-template-columns: 1fr 1.5fr auto;
     align-items: center;
     gap: 32px;
-    background: rgba(0, 1, 34, 0.97);
+    background: var(--bg-surface);
     border-top: 2px solid var(--azul-neon);
-    box-shadow: 0 0 22px rgba(39, 169, 225, 0.5);
+    box-shadow: 0 0 22px var(--neon-glow);
 }
 
 footer h2 {
@@ -180,6 +221,11 @@ footer li,
 .copyright {
     white-space: nowrap;
     font-family: var(--fonte-titulo);
+}
+
+.mode{
+    height: 3em;
+    width: 3em;
 }
 
 @media (max-width: 1000px) {

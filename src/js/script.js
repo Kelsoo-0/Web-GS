@@ -146,5 +146,4 @@ document.getElementById('restart-btn').onclick = () => {
   document.getElementById('score-card').style.display = 'none';
   render();
 };
-
 render();
