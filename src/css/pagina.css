@@ -148,6 +148,31 @@ main {
     justify-content: center;
 }
 
+.pagina-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: clamp(28px, 6vw, 80px);
+}
+
+.pagina-layout-reverso {
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+}
+
+.imagem-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-conteudo img {
+    width: min(100%, 520px);
+    max-height: 430px;
+    object-fit: contain;
+    border-radius: 14px;
+    filter: drop-shadow(0 0 28px rgba(39, 169, 225, 0.45));
+}
+
 .card {
     width: 100%;
     max-width: 920px;
@@ -231,6 +256,19 @@ footer li,
 @media (max-width: 1000px) {
     header {
         flex-direction: column;
+    }
+
+    .pagina-layout,
+    .pagina-layout-reverso {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-layout-reverso .imagem-conteudo {
+        grid-row: 1;
+    }
+
+    .imagem-conteudo img {
+        max-height: 380px;
     }
 
     nav {
